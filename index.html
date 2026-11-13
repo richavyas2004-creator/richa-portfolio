@@ -321,17 +321,13 @@
       <a class="btn ghost" href="https://www.linkedin.com/in/vyas-richa/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <form class="mail" id="mailForm">
-      <p class="mail__t">Or leave your details and I'll get back to you.</p>
+      <p class="mail__t">Or leave your details and I'll open a ready-to-send email for you.</p>
       <div class="mail__row">
         <label><span>Your name</span><input name="name" required autocomplete="name" placeholder="Your name"></label>
         <label><span>Your email</span><input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label>
         <button class="btn solid" type="submit">Send →</button>
       </div>
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-      <input type="hidden" name="_subject" value="New portfolio contact">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="">
       <p class="mail__msg" id="mailMsg" aria-live="polite"></p>
     </form>
     <div class="chips">
@@ -346,22 +342,18 @@
 <script src="assets/site.js"></script>
 <script>
 
-/* ---------- contact form: FormSubmit (AJAX, falls back to a normal form post) ---------- */
+/* ---------- contact form: opens a ready-to-send email (Gmail, or any mail app). No third-party service. ---------- */
 (()=>{const f=$("#mailForm"),m=$("#mailMsg");if(!f)return;
   const TO="richavyas2004@gmail.com";
-  f.action="https://formsubmit.co/"+TO;f.method="POST";
-  try{f.querySelector('[name="_next"]').value=location.href.split("#")[0]+"#contact"}catch(e){}
-  let native=false;
-  f.addEventListener("submit",async e=>{if(native)return;e.preventDefault();
-    const b=f.querySelector("button");b.disabled=true;m.textContent="Sending…";
-    const d=new FormData(f);
-    try{const r=await fetch("https://formsubmit.co/ajax/"+TO,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({name:d.get("name"),email:d.get("email"),message:d.get("message")||"",_subject:"New portfolio contact: "+d.get("name"),_template:"table",_captcha:"false",_honey:d.get("_honey")})});
-      const j=await r.json().catch(()=>({}));
-      if(!r.ok||String(j.success)==="false")throw new Error(j.message||"failed");
-      m.textContent="Thank you! I'll be in touch soon.";f.reset()}
-    catch(err){native=true;m.textContent="Sending…";f.submit()}
-    b.disabled=false})})();
+  f.addEventListener("submit",e=>{e.preventDefault();
+    const d=new FormData(f),name=(d.get("name")||"").trim(),email=(d.get("email")||"").trim();
+    const su="Portfolio enquiry from "+name;
+    const body="Hi Richa,\n\nI'm "+name+" ("+email+"). I saw your portfolio and would like to talk about:\n\n\n";
+    const gmail="https://mail.google.com/mail/?view=cm&fs=1&to="+TO+"&su="+encodeURIComponent(su)+"&body="+encodeURIComponent(body);
+    const mailto="mailto:"+TO+"?subject="+encodeURIComponent(su)+"&body="+encodeURIComponent(body);
+    const w=window.open(gmail,"_blank");if(w)try{w.opener=null}catch(e){}
+    m.innerHTML=(w?"Gmail opened in a new tab. Add a line and hit Send.":"Pop-up blocked.")+' Prefer another app? <a href="'+mailto+'" style="color:var(--blue);text-decoration:underline">Open your email app</a> or write to <a href="mailto:'+TO+'" style="color:var(--blue)">'+TO+'</a>.';
+  })})();
 
 /* ---------- doors ---------- */
 const DOORS=[

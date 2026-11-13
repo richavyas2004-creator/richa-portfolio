@@ -9,13 +9,8 @@ A static site: plain HTML, CSS and JS. You don't need to build anything.
 4. Open **Settings → Pages**. Under "Build and deployment" pick **Deploy from a branch**, then branch **main** and folder **/ (root)**, and click **Save**.
 5. After about a minute your site is live at `https://<your-username>.github.io/richa-portfolio/`.
 
-## Turn on the contact form (one time)
-The form sends messages to richavyas2004@gmail.com through FormSubmit (free, no account needed).
-1. Open your live site and send yourself a test message from the contact form.
-2. FormSubmit emails richavyas2004@gmail.com an **"Activate Form"** message. Check spam too. Click **Activate**.
-3. From then on every message arrives in your inbox.
-
-The form won't send from a file opened on your computer or from inside a preview. It has to run on the live site.
+## Contact form
+No setup needed. When a visitor fills in their name and email and clicks Send, Gmail opens in a new tab with a ready-to-send message addressed to richavyas2004@gmail.com. A link to open any other email app is shown too. No third-party form service is used, so nothing needs activating.
 
 ## Files
 - `index.html`: home page (doors, timeline, Wall of Fame, contact)
