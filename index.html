@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="site.css">
 <style>
 /* ---------- hero ---------- */
 .hero{min-height:100vh;padding:100px 0 0;display:flex;flex-direction:column;overflow:hidden}
@@ -195,7 +195,7 @@
 </style>
 </head>
 <body data-page="home">
-<script src="assets/doodles.js"></script>
+<script src="doodles.js"></script>
 
 <main>
 <!-- HERO -->
@@ -211,7 +211,7 @@
   <div class="wrap hero-grid">
     <div class="photo reveal">
       <div class="blob"></div>
-      <div class="zoom" id="zoom"><img src="assets/me.png" alt="Richa Vyas smiling, in a purple saree"></div>
+      <div class="zoom" id="zoom"><img src="me.png" alt="Richa Vyas smiling, in a purple saree"></div>
     </div>
     <div class="reveal">
       <span class="eyebrow">Performance Creative Strategist · Mumbai, working remote</span>
@@ -298,7 +298,7 @@
             <div class="story__yr" id="yr" aria-hidden="true"></div>
             <p class="story__when" id="when"></p>
             <div class="story__meter"><svg class="ic"><use href="#i-clock"/></svg><b id="idx">01</b><span style="color:var(--muted)">/ <span id="tot"></span></span><span class="story__bar"><i id="bar"></i></span></div>
-            <a class="btn solid story__cta" href="assets/docs/richa-vyas-resume.pdf" target="_blank" rel="noopener">See my Resume ↗</a>
+            <a class="btn solid story__cta" href="richa-vyas-resume.pdf" target="_blank" rel="noopener">See my Resume ↗</a>
           </div>
         </div>
         <div class="story__list">
@@ -349,7 +349,7 @@
 </section>
 </main>
 
-<script src="assets/site.js"></script>
+<script src="site.js"></script>
 <script>
 
 /* ---------- doors ---------- */
@@ -464,12 +464,12 @@ const FAME_SPOTS=[[16,34,10],[48,36,10],[74,26,10],[2,86,10],[24,92,10],[54,86,1
   const inner=(f,big)=>`${ic(f.icon)}<small>${f.kind}</small><b>${f.label}</b>${f.sub?`<small>${f.sub}</small>`:""}${big&&f.q?`<p style="font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.3;max-width:80%;margin-top:8px">“${f.q}”</p>`:big?`<small style="margin-top:6px">Image coming soon</small>`:""}`;
   const place=(el,[l,t,w],i)=>{Object.assign(el.style,{left:l+"%",top:t+"%",width:w+"%"});el.dataset.depth=(.6+((i*37)%10)/10).toFixed(2)};
   FAME.forEach((f,i)=>{const el=document.createElement("div");el.className="pf";el.dataset.i=i;place(el,f.pos,i);
-    el.innerHTML=`<div class="pf__s"><img class="fr" src="assets/frame.png" alt=""><div class="pf__in" data-slot="fame-${i+1}">${inner(f)}</div></div>`;
+    el.innerHTML=`<div class="pf__s"><img class="fr" src="frame.png" alt=""><div class="pf__in" data-slot="fame-${i+1}">${inner(f)}</div></div>`;
     board.appendChild(el)});
   // frames added in the editor land on the next free spot
   board.addEventListener("ed:extra",e=>{const n=board.querySelectorAll(".pf[data-extra]").length-1;place(e.detail,FAME_SPOTS[n%FAME_SPOTS.length],n+FAME.length);delete e.detail.dataset.i});
   board.addEventListener("click",e=>{if(editing())return;const el=e.target.closest(".pf");if(!el)return;const im=el.querySelector(".pf__in img"),f=FAME[el.dataset.i];
-    lightbox(im?`<img src="${im.src}" alt="">`:`<div class="pf"><img class="fr" src="assets/frame.png" alt=""><div class="pf__in">${inner(f,true)}</div></div>`)});
+    lightbox(im?`<img src="${im.src}" alt="">`:`<div class="pf"><img class="fr" src="frame.png" alt=""><div class="pf__in">${inner(f,true)}</div></div>`)});
   let tx=0,ty=0,cx=0,cy=0;
   sec.addEventListener("pointermove",e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
   sec.addEventListener("pointerleave",()=>{tx=ty=0});
@@ -482,7 +482,7 @@ const FAME_SPOTS=[[16,34,10],[48,36,10],[74,26,10],[2,86,10],[24,92,10],[54,86,1
   })();
 })();
 </script>
-<script src="assets/edits/index.js"></script>
-<script src="assets/editor.js"></script>
+<script src="edits-index.js"></script>
+<script src="editor.js"></script>
 </body>
 </html>

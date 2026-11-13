@@ -4,8 +4,8 @@
    2. Click any text to type over it. Use the buttons on images to add, replace or remove them.
       Galleries, the Wall of Fame and work-sample lines also have "+ Add image".
    3. Your changes save in this browser as you go.
-   4. Click "Save to site": a small file downloads (e.g. index.js). Put it in the
-      assets/edits/ folder, replacing the old one. Everyone now sees your changes.  */
+   4. Click "Save to site": a small file downloads (e.g. edits-index.js). Upload it to GitHub,
+      replacing the old one. Everyone now sees your changes.  */
 (()=>{
   const PAGE=(location.pathname.split("/").pop()||"index.html").replace(/\.html?$/,"")||"index";
   const EDIT=/[?&]edit\b/.test(location.search);
@@ -149,7 +149,9 @@
     if(a==="reset"&&confirm("Throw away the changes on this page that you haven't saved to the site?")){await del();location.reload()}
     if(a==="dl"){
       const js="/* Edits for "+PAGE+".html, made with the site editor. */\nwindow.SITE_EDITS="+JSON.stringify(state).replace(/</g,"\\u003c")+";\n";
-      const a2=document.createElement("a");a2.className="ed-ui";a2.href=URL.createObjectURL(new Blob([js],{type:"text/javascript"}));a2.download=PAGE+".js";document.body.appendChild(a2);a2.click();a2.remove();
-      setTimeout(()=>alert(`Downloaded "${PAGE}.js".\n\nPut it in your site's  assets/edits/  folder, replacing the old "${PAGE}.js".\nThen reload this page (without ?edit) to check.`),300);
+      const a2=document.createElement("a");a2.className="ed-ui";a2.href=URL.createObjectURL(new Blob([js],{type:"text/javascript"}));a2.download="edits-"+PAGE+".js";document.body.appendChild(a2);a2.click();a2.remove();
+      setTimeout(()=>alert(`Downloaded "edits-${PAGE}.js".
+
+Upload it to your GitHub repository (Add file > Upload files) to replace the old "edits-${PAGE}.js". The live site updates in 1-2 minutes.`),300);
     }});
 })();
