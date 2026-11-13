@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="cs.css">
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/cs.css">
 <style>
 body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
 .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
@@ -22,7 +22,7 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
 </style>
 </head>
 <body data-page="td">
-<script src="doodles.js"></script>
+<script src="assets/doodles.js"></script>
 <main>
 <header class="cs-hero wrap">
   <div class="tagline"><span>Teardown</span><i></i><span>8 US SaaS brands · static Meta ads</span></div>
@@ -30,13 +30,14 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
   <p class="dek">A great product on its own? So what. Nobody can feel its value before they've tried it, and a static ad gives you exactly one frame to change that.</p>
   <p class="lede">SaaS has always pulled me in. You build a product once, and it can solve a problem for millions. So I studied how some of the best-known US SaaS brands make invisible value feel real, across two categories I love: marketing automation and productivity.</p>
   <div class="meta">
-    <div><small>Brands</small><b>Manychat, Kit, Flodesk, beehiiv, Notion, Motion, Todoist, Sunsama</b></div>
+    <div><small>Brands</small><b>8 US SaaS brands</b></div>
     <div><small>Format</small><b>Static image ads only</b></div>
     <div><small>Geography</small><b>United States</b></div>
     <div><small>Status</small><b>Independent qualitative teardown</b></div>
   </div>
+  <div class="logos"><span class="brand"><img src="assets/logos/manychat.png" alt="Manychat logo" width="24" height="24">Manychat</span><span class="brand"><img src="assets/logos/kit.png" alt="Kit logo" width="24" height="24">Kit</span><span class="brand"><img src="assets/logos/flodesk.png" alt="Flodesk logo" width="24" height="24">Flodesk</span><span class="brand"><img src="assets/logos/beehiiv.png" alt="beehiiv logo" width="24" height="24">beehiiv</span><span class="brand"><img src="assets/logos/notion.png" alt="Notion logo" width="24" height="24">Notion</span><span class="brand"><img src="assets/logos/motion.png" alt="Motion logo" width="24" height="24">Motion</span><span class="brand"><img src="assets/logos/todoist.png" alt="Todoist logo" width="24" height="24">Todoist</span><span class="brand"><img src="assets/logos/sunsama.png" alt="Sunsama logo" width="24" height="24">Sunsama</span></div>
   <figure class="shot cs-cover">
-    <div class="shot__img" data-slot="td-cover"><img src="td-cover.webp" alt="US Market Teardown cover with eight SaaS brand logos"></div>
+    <div class="shot__img" data-slot="td-cover"><img src="assets/img/td-cover.webp" alt="US Market Teardown cover with eight SaaS brand logos"></div>
     <figcaption>How SaaS brands make value you can’t hold feel real in one static frame.</figcaption>
   </figure>
 </header>
@@ -52,7 +53,7 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
     <a href="#ideas"><span>06</span>Opportunity library</a>
     <a href="#measure"><span>07</span>Measurement</a>
     <a href="#limits"><span>08</span>Limitations</a>
-    <a class="dl" href="us-market-teardown.pdf" target="_blank"><svg class="ic"><use href="#i-arrow-down"/></svg>Full PDF</a>
+    <a class="dl" href="assets/docs/us-market-teardown.pdf" target="_blank"><svg class="ic"><use href="#i-arrow-down"/></svg>Full PDF</a>
   </aside>
 
   <article>
@@ -87,13 +88,13 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
       <h2><span class="n">03</span>Marketing automation</h2>
       <p class="big">On paper, all four could be filed under “email or messaging automation”. Their ads don't look alike. And none of them is really selling automation.</p>
       <div class="tw"><table class="t"><thead><tr><th>Brand · dates</th><th>What the ads say</th><th>Creative direction I see</th></tr></thead><tbody>
-        <tr><td>Manychat · Aug–Oct 2026</td><td>“Every missed connection is a lost customer”; comment-to-DM, quick replies, FAQ automation</td><td>Direct-response and mechanism-led: a familiar seller problem leads straight into a visible workflow</td></tr>
-        <tr><td>Kit · from Oct 8, 2026</td><td>“Your business grows 24/7 while you focus on what you love”; creator stories; automation templates</td><td>Creator story meets problem-solving: relief from manual work, and the opportunity in an existing audience</td></tr>
-        <tr><td>Flodesk · Aug–Sep 2026</td><td>“Your brand, exactly as you imagined it”; “What if your emails looked as good as your feed?”</td><td>Design-led identity. The email itself is the proof</td></tr>
-        <tr><td>beehiiv · Oct 5–20, 2026</td><td>“Get paid every time you hit send” with payout visuals; a 7-figure newsletter story</td><td>Monetisation and scale. Payouts need context so exceptional outcomes don't read as typical</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/manychat.png" alt="Manychat logo" width="24" height="24">Manychat</span> · Aug–Oct 2026</td><td>“Every missed connection is a lost customer”; comment-to-DM, quick replies, FAQ automation</td><td>Direct-response and mechanism-led: a familiar seller problem leads straight into a visible workflow</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/kit.png" alt="Kit logo" width="24" height="24">Kit</span> · from Oct 8, 2026</td><td>“Your business grows 24/7 while you focus on what you love”; creator stories; automation templates</td><td>Creator story meets problem-solving: relief from manual work, and the opportunity in an existing audience</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/flodesk.png" alt="Flodesk logo" width="24" height="24">Flodesk</span> · Aug–Sep 2026</td><td>“Your brand, exactly as you imagined it”; “What if your emails looked as good as your feed?”</td><td>Design-led identity. The email itself is the proof</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/beehiiv.png" alt="beehiiv logo" width="24" height="24">beehiiv</span> · Oct 5–20, 2026</td><td>“Get paid every time you hit send” with payout visuals; a 7-figure newsletter story</td><td>Monetisation and scale. Payouts need context so exceptional outcomes don't read as typical</td></tr>
       </tbody></table></div>
       <div class="pull"><svg class="ic"><use href="#i-send-3"/></svg>These brands differentiate by choosing which outcome to make visible, not by listing what the product does.<small>The catch: the most tangible proof, a payout or a “100x”, is also the hardest to back up.</small></div>
-      <div class="shots" data-add="td-mkt"><figure class="shot"><div class="shot__img" data-slot="td-mkt-1"><img src="td-mkt-1.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-2"><img src="td-mkt-2.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-3"><img src="td-mkt-3.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-4"><img src="td-mkt-4.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-5"><img src="td-mkt-5.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-6"><img src="td-mkt-6.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-7"><img src="td-mkt-7.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-8"><img src="td-mkt-8.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-9"><img src="td-mkt-9.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure></div>
+      <div class="shots" data-add="td-mkt"><figure class="shot"><div class="shot__img" data-slot="td-mkt-1"><img src="assets/img/td-mkt-1.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-2"><img src="assets/img/td-mkt-2.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-3"><img src="assets/img/td-mkt-3.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-4"><img src="assets/img/td-mkt-4.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-5"><img src="assets/img/td-mkt-5.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-6"><img src="assets/img/td-mkt-6.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-7"><img src="assets/img/td-mkt-7.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-8"><img src="assets/img/td-mkt-8.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure><figure class="shot"><div class="shot__img" data-slot="td-mkt-9"><img src="assets/img/td-mkt-9.webp" alt="Marketing-automation ads in the Meta Ad Library" loading="lazy"></div></figure></div>
       <p style="font-size:14px;color:var(--muted)">Representative Meta Ad Library captures. Close variants within a capture aren’t automatically unique concepts. Click to enlarge.</p>
     </section>
 
@@ -101,10 +102,10 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
       <h2><span class="n">04</span>Productivity SaaS</h2>
       <p class="big">Same category, four different front doors.</p>
       <div class="tw"><table class="t"><thead><tr><th>Brand · dates</th><th>What the ads say</th><th>Creative direction I see</th></tr></thead><tbody>
-        <tr><td>Sunsama · Dec 2025; Jun–Oct 2026</td><td>“Before the day starts running you, make a plan for it”; “The workday ends but the work doesn't”</td><td>Simple and angle-focused. Planning, scattered tools and closure, never a feature tour</td></tr>
-        <tr><td>Notion · Aug 5–Oct 15, 2026</td><td>“Unlock the power of AI at work”; custom agents for reports and ticket triage</td><td>AI-led breadth. The core message stays fixed while workflows vary underneath</td></tr>
-        <tr><td>Motion · Dec 2023–Apr 2026</td><td>“Get 25% more done”; handwritten notes like “my calendar literally creates itself”</td><td>One fixed promise, many lo-fi executions. Reads like a friend's tip, not an ad</td></tr>
-        <tr><td>Todoist · from Oct 8, 2026</td><td>“Connect Todoist to Claude and create, assign and check off tasks…”</td><td>Integration-led. Strongest when a real task visibly moves from request to done</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/sunsama.png" alt="Sunsama logo" width="24" height="24">Sunsama</span> · Dec 2025; Jun–Oct 2026</td><td>“Before the day starts running you, make a plan for it”; “The workday ends but the work doesn't”</td><td>Simple and angle-focused. Planning, scattered tools and closure, never a feature tour</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/notion.png" alt="Notion logo" width="24" height="24">Notion</span> · Aug 5–Oct 15, 2026</td><td>“Unlock the power of AI at work”; custom agents for reports and ticket triage</td><td>AI-led breadth. The core message stays fixed while workflows vary underneath</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/motion.png" alt="Motion logo" width="24" height="24">Motion</span> · Dec 2023–Apr 2026</td><td>“Get 25% more done”; handwritten notes like “my calendar literally creates itself”</td><td>One fixed promise, many lo-fi executions. Reads like a friend's tip, not an ad</td></tr>
+        <tr><td><span class="brand"><img src="assets/logos/todoist.png" alt="Todoist logo" width="24" height="24">Todoist</span> · from Oct 8, 2026</td><td>“Connect Todoist to Claude and create, assign and check off tasks…”</td><td>Integration-led. Strongest when a real task visibly moves from request to done</td></tr>
       </tbody></table></div>
       <h3>What customers say</h3>
       <div class="cols">
@@ -113,7 +114,7 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
         <div class="card"><p>“I usually stop when maintaining the task system starts feeling like a second job.”</p><small>r/ProductivityApps</small></div>
       </div>
       <p><b>What I notice:</b> nobody is asking for more features. They're tired of the tool becoming the work.</p>
-      <div class="shots" data-add="td-prod"><figure class="shot"><div class="shot__img" data-slot="td-prod-1"><img src="td-prod-1.webp" alt="Sunsama ads in the Meta Ad Library" loading="lazy"></div><figcaption>Sunsama</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-2"><img src="td-prod-2.webp" alt="Sunsama ads in the Meta Ad Library" loading="lazy"></div><figcaption>Sunsama</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-3"><img src="td-prod-3.webp" alt="Notion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Notion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-4"><img src="td-prod-4.webp" alt="Notion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Notion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-5"><img src="td-prod-5.webp" alt="Motion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Motion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-6"><img src="td-prod-6.webp" alt="Motion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Motion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-7"><img src="td-prod-7.webp" alt="Todoist ads in the Meta Ad Library" loading="lazy"></div><figcaption>Todoist</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-8"><img src="td-prod-8.webp" alt="Todoist ads in the Meta Ad Library" loading="lazy"></div><figcaption>Todoist</figcaption></figure></div>
+      <div class="shots" data-add="td-prod"><figure class="shot"><div class="shot__img" data-slot="td-prod-1"><img src="assets/img/td-prod-1.webp" alt="Sunsama ads in the Meta Ad Library" loading="lazy"></div><figcaption>Sunsama</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-2"><img src="assets/img/td-prod-2.webp" alt="Sunsama ads in the Meta Ad Library" loading="lazy"></div><figcaption>Sunsama</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-3"><img src="assets/img/td-prod-3.webp" alt="Notion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Notion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-4"><img src="assets/img/td-prod-4.webp" alt="Notion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Notion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-5"><img src="assets/img/td-prod-5.webp" alt="Motion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Motion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-6"><img src="assets/img/td-prod-6.webp" alt="Motion ads in the Meta Ad Library" loading="lazy"></div><figcaption>Motion</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-7"><img src="assets/img/td-prod-7.webp" alt="Todoist ads in the Meta Ad Library" loading="lazy"></div><figcaption>Todoist</figcaption></figure><figure class="shot"><div class="shot__img" data-slot="td-prod-8"><img src="assets/img/td-prod-8.webp" alt="Todoist ads in the Meta Ad Library" loading="lazy"></div><figcaption>Todoist</figcaption></figure></div>
       <p style="font-size:14px;color:var(--muted)">Representative Meta Ad Library captures. Repeated territories inform the qualitative read; they don’t prove performance.</p>
     </section>
 
@@ -122,11 +123,11 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
       <p>Different products, different buyers. Same problem underneath: software is abstract, and a static ad has one frame to make it concrete. A feature list tells you what the product can do. A proof object lets you picture it doing it for you.</p>
       <div class="pull"><svg class="ic"><use href="#i-note"/></svg>When the message is broad, make the workflow narrower. When the hook is emotional, make the mechanism visible.<small>My rule of thumb</small></div>
       <div class="tw"><table class="t"><thead><tr><th>Pattern</th><th>Seen in</th><th>What I'd take from it</th></tr></thead><tbody>
-        <tr><td>Show the mechanism</td><td>Manychat</td><td>Input → automated response → next step</td></tr>
-        <tr><td>Make the promise tangible</td><td>beehiiv</td><td>Show the outcome, with context</td></tr>
-        <tr><td>Use the output as proof</td><td>Flodesk</td><td>Let the output carry the claim, not adjectives</td></tr>
-        <tr><td>Keep the promise focused</td><td>Sunsama</td><td>One static, one legible angle</td></tr>
-        <tr><td>Make the workflow concrete</td><td>Todoist</td><td>One specific task moving through</td></tr>
+        <tr><td>Show the mechanism</td><td><span class="brand"><img src="assets/logos/manychat.png" alt="Manychat logo" width="24" height="24">Manychat</span></td><td>Input → automated response → next step</td></tr>
+        <tr><td>Make the promise tangible</td><td><span class="brand"><img src="assets/logos/beehiiv.png" alt="beehiiv logo" width="24" height="24">beehiiv</span></td><td>Show the outcome, with context</td></tr>
+        <tr><td>Use the output as proof</td><td><span class="brand"><img src="assets/logos/flodesk.png" alt="Flodesk logo" width="24" height="24">Flodesk</span></td><td>Let the output carry the claim, not adjectives</td></tr>
+        <tr><td>Keep the promise focused</td><td><span class="brand"><img src="assets/logos/sunsama.png" alt="Sunsama logo" width="24" height="24">Sunsama</span></td><td>One static, one legible angle</td></tr>
+        <tr><td>Make the workflow concrete</td><td><span class="brand"><img src="assets/logos/todoist.png" alt="Todoist logo" width="24" height="24">Todoist</span></td><td>One specific task moving through</td></tr>
       </tbody></table></div>
     </section>
 
@@ -177,8 +178,6 @@ body{--accent:var(--sun);--accent-soft:var(--sun-soft)}
   </article>
 </div>
 </main>
-<script src="site.js"></script>
-<script src="edits-teardown.js"></script>
-<script src="editor.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

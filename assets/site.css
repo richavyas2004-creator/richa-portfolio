@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&text=0123456789&display=swap");
 /* Shared styles for every page: tokens, header, rope, buttons, doodles, footer */
 :root{
   --bg:#F7F3EC; --bg2:#EFEBE3; --surface:#FFFDF8; --text:#1E2240; --muted:#5E6280;
@@ -5,7 +6,7 @@
   --pink:#FFD9D9; --peach:#FFE0CC; --mint:#C8EFDB; --green:#86DFAE; --lav:#DDE0FF; --peri:#96A6FF; --lilac:#F8DDF8; --butter:#FFF1B8;
   --rose:#D94A8C;--rose-soft:#FFDCEB;--grape:#B9A4F5;--grape-soft:#ECE5FF;--sage:#9ADDB8;--sage-soft:#DDF5E8;--sun:#F5D46A;--sun-soft:#FFF3C4;--apricot:#FFB88C;--apricot-soft:#FFE6D6;
   --wall:#E9E4DA; --casing:#FBF8F2; --on-pastel:#1E2240;
-  --serif:"Instrument Serif",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif; --mono:"DM Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
+  --serif:"DM Serif Display","Instrument Serif",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif; --mono:"DM Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
 }
 :root[data-theme="dark"]{
   --bg:#10142B; --bg2:#141936; --surface:#1C2246; --text:#F2EEE6; --muted:#A9AECB;

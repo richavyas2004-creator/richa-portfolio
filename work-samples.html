@@ -4,78 +4,177 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work samples · Richa Vyas</title>
-<meta name="description" content="Ad creatives, social posts, brochures, emailers and decks from five years of making things.">
+<meta name="description" content="Ad creatives, landing pages, social media, print, branding, emailers, writing and prototypes, sorted by type of work.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-.ws-hero{padding:140px 0 70px}
+.ws-hero{padding:140px 0 50px}
 .ws-hero h1{font-size:clamp(60px,10vw,140px)}
-.ws-hero p{max-width:620px;color:var(--muted);margin-top:14px;font-size:18px}
+.ws-hero p{max-width:640px;color:var(--muted);margin-top:14px;font-size:18px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.jump a{font-size:13px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--c);color:#1E2240;transition:transform .2s}
+.jump a:hover{transform:translateY(-2px)}
 .ws-hero .walk{display:flex;align-items:center;gap:12px;margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .ws-hero .walk i{width:40px;height:1.5px;background:var(--muted)}
-.band{position:relative;height:280vh;background:var(--bb);color:var(--bt)}
-.band__pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:60px}
-.band__head{display:grid;grid-template-columns:1fr 380px;gap:30px;align-items:end;margin-bottom:26px}
+.band{--ph:min(330px,36vh);position:relative;background:var(--bb);color:var(--bt)}
+.band__pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:70px}
+.band__head{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:end;margin-bottom:18px}
 .band__head .k{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;display:flex;gap:12px;align-items:center}
 .band__head .k i{width:40px;height:1.5px;background:currentColor}
-.band__head h2{font-size:clamp(46px,6.4vw,92px);margin-top:10px;color:var(--bt)}
-.band__head h2 em{color:inherit;opacity:.55}
+.band__head h2{font-size:clamp(38px,5.2vw,80px);margin-top:8px;color:var(--bt)}
 .band__head p{font-size:15px;opacity:.85}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .tags span{font-size:12px;padding:4px 10px;border-radius:999px;border:1.5px solid currentColor;opacity:.8}
-.line{position:relative;height:440px}
+.folders{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.folder{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;background:#FFFDF6;color:#1E2240;border:1.5px solid #1E2240;box-shadow:3px 3px 0 #1E2240;transition:transform .2s,box-shadow .2s}
+.folder:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #1E2240}
+.line{position:relative;height:calc(var(--ph) + 100px)}
 .line::before{content:"";position:absolute;left:-5%;right:-5%;top:18px;height:2px;background:currentColor;opacity:.55;transform:rotate(-.4deg)}
 .prints{position:absolute;left:0;top:0;display:flex;gap:44px;padding:0 6vw;will-change:transform}
-.print{position:relative;flex:none;width:260px;padding-top:10px;cursor:zoom-in;transform-origin:50% 0;animation:sway 6s ease-in-out infinite;animation-delay:calc(var(--d) * -1s)}
+.print{position:relative;flex:none;width:clamp(160px,calc(var(--ph) * var(--ar)),600px);padding-top:10px;cursor:pointer;transform-origin:50% 0;animation:sway 6s ease-in-out infinite;animation-delay:calc(var(--d) * -1s);color:inherit;display:block}
 .print:hover{animation-play-state:paused}
-@keyframes sway{0%,100%{rotate:-1.6deg}50%{rotate:1.6deg}}
+@keyframes sway{0%,100%{rotate:-1.4deg}50%{rotate:1.4deg}}
 .peg{position:absolute;left:50%;top:0;width:14px;height:34px;margin-left:-7px;border-radius:3px;background:linear-gradient(90deg,#C9A273,#E3C499 50%,#B98D5B);box-shadow:0 2px 0 rgba(0,0,0,.25);z-index:2}
-.paper{margin-top:18px;aspect-ratio:4/5;background:#FFFDF6;color:#1E2240;box-shadow:0 18px 30px rgba(0,0,0,.22);padding:12px;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
-.print:hover .paper{transform:scale(1.06) translateY(4px)}
-.paper .ph{height:100%;border-radius:4px;border-color:rgba(31,42,107,.2);color:#5E6280}
-.paper .ph .ic{color:#1F2A6B}
-.paper img{width:100%;height:100%;object-fit:cover}
-.paper.has-img{padding:0}
-.cap{margin-top:12px;font-size:13px;opacity:.85}
-.lightbox .paper{margin:0;width:100%;max-height:82vh}
+.paper{position:relative;margin-top:18px;height:var(--ph);background:#FFFDF6;color:#1E2240;box-shadow:0 18px 30px rgba(0,0,0,.22);padding:8px;transition:transform .45s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.print:hover .paper{transform:scale(1.05) translateY(4px)}
+.paper img,.paper video{width:100%;height:100%;object-fit:contain;display:block}
+.badge{position:absolute;left:10px;top:10px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:#1E2240;color:#fff;max-width:calc(100% - 20px)}
+.paper .note{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:8px 10px;font-size:11.5px;line-height:1.3;background:#FFF1B8;color:#5A4300;border-top:1.5px solid #E2C766}
+/* no-preview card: title, colour code, click me */
+.paper.nop{background:var(--ac);color:#fff;padding:20px 18px;display:flex;flex-direction:column;justify-content:space-between;border:2px solid #1E2240}
+.nop .kind{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.nop b{font-family:var(--serif);font-weight:400;font-size:clamp(20px,calc(var(--ph) / 12),28px);line-height:1.08}
+.nop .cta{align-self:flex-start;font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;background:#fff;color:#1E2240;box-shadow:3px 3px 0 #1E2240;transition:transform .2s}
+.print:hover .nop .cta{transform:translate(-2px,-2px)}
+.cap{margin-top:10px;font-size:13px;line-height:1.3}
+.cap b{display:block;font-weight:600;font-size:14px}
+.cap span{opacity:.75}
+.lightbox .big:has(.strip){width:min(1200px,94vw)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.strip img{flex:none;width:min(520px,80vw);scroll-snap-align:center;border-radius:12px;background:#fff}
+.strip-hint{color:#fff;font-family:var(--hand);font-size:22px;margin-top:6px;text-align:center}
+.lightbox video{width:100%;max-height:86vh;border-radius:12px;background:#000}
 @media (max-width:900px){
-  .band__head{grid-template-columns:1fr}
-  .print{width:200px}
-  .line{height:360px}
+  .band{--ph:min(250px,30vh)}
+  .band__head{grid-template-columns:1fr;gap:6px}
+  .band__head p{font-size:13.5px}
+  .band__head .tags{display:none}
 }
+@media (max-width:520px){.band{--ph:min(220px,28vh)}.paper .note{font-size:10px;padding:6px 8px}}
 </style>
 </head>
 <body data-page="ws">
-<script src="doodles.js"></script>
+<script src="assets/doodles.js"></script>
 <main>
 <header class="ws-hero wrap">
   <span class="eyebrow">Work samples</span>
   <h1>Things I've <em>made</em></h1>
-  <p>Ad creatives, social posts, brochures, emailers and decks from five years of making things. Each brand hangs on its own line, in its own colours. Scroll to walk along it, and click any print to see it up close.</p>
+  <p>Sorted by the kind of work it is. Click an image to see it big, a PDF or a coloured card to open it in Google Drive, or open a whole section's folder.</p>
+  <nav class="jump" id="jump" aria-label="Jump to a type of work"></nav>
   <div class="walk"><i></i>Scroll to walk the line</div>
 </header>
 <div id="bands"></div>
 </main>
-<script src="site.js"></script>
+<script src="assets/site.js"></script>
 <script>
-// Add images with the image editor: open work-samples.html?edit
-const BANDS=[
-  {k:"01 · Paid social · Performance creative",t:"RadImpressions",d:"Static and video ad concepts for client campaigns on Meta and Google, written around audience insight and tested hook by hook.",tags:["Ad creatives","Hooks","UGC scripts"],bb:"#2F5FD0",bt:"#FFFFFF",n:6},
-  {k:"02 · Fintech · Content & design",t:"FIKAA",d:"Financial education for women and first-time investors: posts, carousels, reels covers, blog graphics and newsletters.",tags:["Instagram","Carousels","Blogs"],bb:"#FFDCEB",bt:"#1E2240",n:6},
-  {k:"03 · Travel & education · Campaigns",t:"Adventure Tours",d:"Brochures that worked like a silent sales rep, email sequences, event cards and social for corporate and educational trips.",tags:["Brochures","Emailers","Event cards"],bb:"#DDF5E8",bt:"#1E2240",n:5},
-  {k:"04 · Freelance & side projects · Since 2021",t:"Freelance",d:"30+ client projects and 50+ brand leads: creator content for Komalified, social for The Soft Move, plus decks, posters and logos.",tags:["Branding","Social","UGC scripts","Pitches","Decks"],bb:"#FFE6D6",bt:"#1E2240",n:6},
+const W="assets/ws/";
+const F=id=>`https://drive.google.com/file/d/${id}/view`, D=id=>`https://drive.google.com/drive/folders/${id}`;
+const HTML_NOTE="Built in HTML. Shown here as a PDF export, so the design isn't pixel-accurate.";
+// kind: img | gallery | pdf (preview, opens in Drive) | video | card (no preview: title + colour + click me)
+const CATS=[
+  {id:"ads",k:"01 · Ad creatives",t:"Ad Creatives",d:"Static Meta ad concepts, each built around one audience insight and one clear offer.",tags:["Static ads","Meta","Hooks"],bb:"#2F5FD0",bt:"#FFFFFF",ac:"#2F5FD0",
+   folders:[["Ad Creatives folder",D("1SArC_okCgMYO3_sbZDrATd16-zqWH42A")]],items:[
+    {t:"Manychat: “Your next sale won't wait”",type:"Static ad set · 3 ads",kind:"img",src:"ad-manychat.webp",ar:2},
+    {t:"FIKAA: ₹34 digital gold for KYC",type:"Static ad set · 3 ads",kind:"img",src:"ad-fikaa.webp",ar:1},
+    {t:"Sunsama: “Done for the day”",type:"Static ad set · 3 ads",kind:"img",src:"ad-sunsama.webp",ar:2.4},
+    {t:"Masterclass: “More returning therapy clients”",type:"Static ad",kind:"img",src:"ad-somatic.webp",ar:1},
+    {t:"Masterclass: “Your therapy has value”",type:"Static ad",kind:"img",src:"ad-therapy-value.webp",ar:1},
+    {t:"Masterclass: “Your therapy couch deserves better”",type:"Static ad",kind:"img",src:"ad-therapy-couch.webp",ar:.8},
+  ]},
+  {id:"web",k:"02 · Landing pages",t:"Landing Pages & Website Copy",d:"Conversion pages and full website copy, written and built for coaching and health brands.",tags:["Landing page","Thank-you page","Website copy"],bb:"#1E2240",bt:"#FFFFFF",ac:"#C99A1E",
+   folders:[["Landing Page Copy folder",D("10IM_uQ30P7rpECEXl2dzV0vdDAo2_66b")]],items:[
+    {t:"SomaCurah masterclass thank-you page",type:"Thank-you page · PDF",kind:"pdf",src:"lp-somacurah.webp",href:F("1MCjecpDtSu5s_WMbo5j7cIl-gStoXE13"),ar:.77,note:HTML_NOTE},
+    {t:"Physics Edge demo-class landing page",type:"Landing page · PDF",kind:"pdf",src:"lp-physics.webp",href:F("1t3-8THDN_r9IYbNsoRq8bH1z0Fqb8fkY"),ar:.71,note:HTML_NOTE},
+    {t:"Horizon Fit Website Copy",type:"Website copy · PDF",kind:"card",href:F("1X1OjkRQKwWOUT7W2wUEUqG0cPVq6IPAj"),ar:.8},
+  ]},
+  {id:"social",k:"03 · Social media",t:"Social Media",d:"Carousels, posts and stories for an agency, a dental brand, a fintech app and a travel-education company.",tags:["Carousels","Posts","Stories"],bb:"#FFDCEB",bt:"#1E2240",ac:"#D94A8C",
+   folders:[["Social Media folder",D("1Rc_NxnmU_Pkk9QNet2NZ33baXPht1o3i")]],items:[
+    {t:"WebZario: “50 leads, only 3 serious?”",type:"Carousel · 5 slides",kind:"gallery",src:["car-webzario-1.webp","car-webzario-2.webp","car-webzario-3.webp","car-webzario-4.webp","car-webzario-5.webp"],ar:1},
+    {t:"De9to: 3 ways to keep your teeth healthy",type:"Seamless carousel",kind:"img",src:"car-de9to.webp",ar:5},
+    {t:"Astrocamp event announcement",type:"Social post",kind:"img",src:"post-astrocamp.webp",ar:.71},
+    {t:"Summer camp: “Adventure is calling you”",type:"Social post",kind:"img",src:"post-summer.webp",ar:.8},
+    {t:"De9to: “Did you know?” soda fact",type:"Social post",kind:"img",src:"post-soda.webp",ar:1},
+    {t:"De9to: Nurturing smiles",type:"Instagram story",kind:"img",src:"story-smiles.webp",ar:.5625},
+    {t:"FIKAA: Truly for the women of today",type:"Instagram story",kind:"img",src:"story-fikaa.webp",ar:.5625},
+  ]},
+  {id:"print",k:"04 · Print",t:"Brochures, Posters & Standees",d:"School-trip flyers, a roll-up standee, a full brochure and a sales deck for an education travel company.",tags:["Flyers","Standee","Brochures","Presentation"],bb:"#DDF5E8",bt:"#1E2240",ac:"#2E9E66",
+   folders:[["Brochures & Posters folder",D("1w7ebBiTCAm208SfVPSdtvpjfMnIeigW6")],["Standees folder",D("1dYAC70qbgYIUx9sPuftde0xRa7QlclZk")]],items:[
+    {t:"School trips to MuSo",type:"Flyer",kind:"img",src:"fly-muso.webp",ar:.71},
+    {t:"Mumbai's iconic infrastructure tour",type:"Flyer",kind:"img",src:"fly-mumbai.webp",ar:.71},
+    {t:"International trips",type:"Roll-up standee",kind:"img",src:"standee-intl.webp",ar:.42},
+    {t:"USA & NASA Itinerary",type:"Brochure · PDF",kind:"card",href:F("1cWAQj-5Pe76I5f27krlee_QXTQ8tShcY"),ar:.8},
+    {t:"Adventure Education Corporate Deck",type:"Presentation · PDF",kind:"card",href:F("1_ADcqNSsajABS3hfKLqfx5SoUTCH93by"),ar:.8},
+  ]},
+  {id:"brand",k:"05 · Logo & branding",t:"Logo & Branding",d:"Identity for a boutique, travel merchandise, ISRO tour campaign creatives and a logo animation.",tags:["Logo","Business card","Bag tag","Campaign","Animation"],bb:"#ECE5FF",bt:"#1E2240",ac:"#7B61D9",
+   folders:[["Logo & Branding folder",D("1vD-c3UDMG1chbj8K7Bi096QTv2rZCtF4")]],items:[
+    {t:"Raizel's Boutique",type:"Logo",kind:"img",src:"logo-raizel.webp",ar:1},
+    {t:"Raizel's Boutique · front",type:"Business card",kind:"img",src:"card-raizel.webp",ar:1.5},
+    {t:"Raizel's Boutique · back",type:"Business card",kind:"img",src:"card-back.webp",ar:1.5},
+    {t:"“I just want to Rome around”",type:"Bag tag · front",kind:"img",src:"tag-rome.webp",ar:1.75},
+    {t:"“This luggage belongs to”",type:"Bag tag · back",kind:"img",src:"tag-back.webp",ar:1.75},
+    {t:"ISRO tours: “Heyy teachers!”",type:"Campaign creative",kind:"img",src:"isro-1.webp",ar:.8},
+    {t:"ISRO experiential learning tours",type:"Campaign creative",kind:"img",src:"isro-2.webp",ar:.8},
+    {t:"Logo animation",type:"Animation · MP4",kind:"video",src:"logo-animation.mp4",ar:1},
+  ]},
+  {id:"email",k:"06 · Emailers",t:"Emailers",d:"B2B emailers to school principals and coordinators, pitching STEM and field trips.",tags:["B2B email","Education"],bb:"#FFE6D6",bt:"#1E2240",ac:"#E07A2E",
+   folders:[["Emailers folder",D("1II52OtrCS8pNLSMtMc8wyhHsXkR5JWsp")]],items:[
+    {t:"“Unlock the Universe”: ISRO space trips",type:"Emailer · PDF",kind:"pdf",src:"email-isro.webp",href:F("1cUZkn4zwzStJlZwbWJ2ihkLSTmS4wsGm"),ar:.71},
+    {t:"MuSo: Museum of Solutions",type:"Emailer · PDF",kind:"pdf",src:"email-muso.webp",href:F("1xJSPuKRqivl87i0yXKGzlvFSADoh2nd6"),ar:.71},
+    {t:"Mumbai's infrastructure tour",type:"Emailer · PDF",kind:"pdf",src:"email-mumbai.webp",href:F("1VO6b45dTtKwDVMiUZJFMz0PrvzoOOhLa"),ar:.71},
+  ]},
+  {id:"writing",k:"07 · Blogs & articles",t:"Blogs & Articles",d:"Long-form writing on marketing, personal finance for women and travel.",tags:["Blogs","Articles"],bb:"#E9E4DA",bt:"#1E2240",ac:"#1C3A8F",
+   folders:[["Blogs folder",D("1aadXIX9uS41a7LWyz6cWZP0NUI5Q7O5D")]],items:[
+    {t:"You Have a Great Product. So What?",type:"Marketing blog",kind:"card",href:F("1_Sino_8UPFmqBuBABIXHdnVhl-hKrfY1"),ar:.8},
+    {t:"Empower Women in the Financial World",type:"Finance article",kind:"card",href:F("1LEV672oVjpr8FZBQBzngYYuX1fP_Mnnk"),ar:.8},
+    {t:"Why Choose FIKAA",type:"Brand article",kind:"card",href:F("1EStRKn_bMj1Qs_Jz1VzzkqvGVwV7dkw8"),ar:.8},
+    {t:"Priceless Memories from My First Solo Trip",type:"Personal blog",kind:"card",href:F("1OlKGTLwD0ROpOy_4j-YJc758JX0Ee5Ha"),ar:.8},
+  ]},
+  {id:"reel",k:"08 · Personal reel",t:"Personal Reel Script",d:"A reel I wrote about turning 22, the fear of being mediocre, and letting go of numbers as identity. Plus the reel it became.",tags:["Reel script","Storytelling","Video"],bb:"#FFF3C4",bt:"#1E2240",ac:"#C2410C",
+   folders:[["Personal Story Telling folder",D("1ax8SDy4X7or5Yu6nzNIYI0f9nYcfuyRQ")]],items:[
+    {t:"Happy Irrelevant Birthday",type:"Reel script",kind:"card",href:F("1To_wWIN1tU1a5DumdjywWNWKQgDwXq-F"),ar:.8},
+    {t:"Richa, In 22 Pieces",type:"Personal reel · Video",kind:"card",href:F("16XaokkGL2Rse_U-okY6jIyR34rIULiST"),ar:.8},
+  ]},
+  {id:"pm",k:"09 · Operations",t:"Project Management & AI Prototypes",d:"Systems for running marketing work: client workspaces, content calendars and an AI brief-checking prototype.",tags:["Project management","AI prototype"],bb:"#DCE3FF",bt:"#1E2240",ac:"#2F5FD0",
+   folders:[["PM & AI Prototype folder",D("1OpVF6yXoCluRZKdYSX_P9TxTXtP9YCEp")]],items:[
+    {t:"Marketing operations & project management",type:"Work samples · Doc",kind:"pdf",src:"pm-samples.webp",href:"https://docs.google.com/document/d/1DiHNU45LmhmceHFMkNJfdc7mKuRJ8braWPflNR-W6Tk/view",ar:.71},
+    {t:"Brief Health Score",type:"AI prototype",kind:"img",src:"ai-proto.webp",ar:2.05},
+  ]},
 ];
-const ICONS=["camera","paint-brush","pencil","megaphone","frame","star","heart","bulb"];
 (()=>{
   const host=$("#bands");
-  host.innerHTML=BANDS.map((b,bi)=>`<section class="band" style="--bb:${b.bb};--bt:${b.bt}"><div class="band__pin">
-    <div class="wrap band__head"><div><div class="k"><span>${b.k.split(" · ")[0]}</span><i></i><span>${b.k.split(" · ").slice(1).join(" · ")}</span></div><h2>${b.t}</h2></div>
-      <div><p>${b.d}</p><div class="tags">${b.tags.map(t=>`<span>${t}</span>`).join("")}</div></div></div>
-    <div class="line"><div class="prints" data-add="ws-${bi}">${[...Array(b.n)].map((_,i)=>`<div class="print" style="--d:${(i*1.3+bi)%6}" data-b="${bi}" data-i="${i}"><span class="peg"></span><div class="paper" data-slot="ws-${bi}-${i}"><div class="ph">${ic(ICONS[(i+bi)%ICONS.length])}<span>${b.t} · ${String(i+1).padStart(2,"0")}</span><small>image coming</small></div></div><div class="cap">${b.tags[i%b.tags.length]}</div></div>`).join("")}</div></div>
+  $("#jump").innerHTML=CATS.map(c=>`<a href="#${c.id}" style="--c:${c.bb==="#1E2240"||c.bb==="#2F5FD0"?"#DCE3FF":c.bb}">${c.t}</a>`).join("");
+  const paper=(c,it)=>{
+    if(it.kind==="card")return`<div class="paper nop" style="--ac:${c.ac}"><span class="kind">${it.type}</span><b>${it.t}</b><span class="cta">Click me →</span></div>`;
+    const src=Array.isArray(it.src)?it.src[0]:it.src;
+    const media=it.kind==="video"?`<video src="${W+src}" autoplay muted loop playsinline></video>`:`<img src="${W+src}" alt="${it.t}" loading="lazy">`;
+    return`<div class="paper"><span class="badge">${it.type}</span>${media}${it.note?`<span class="note">${it.note}</span>`:""}</div>`};
+  host.innerHTML=CATS.map((c,ci)=>`<section class="band" id="${c.id}" style="--bb:${c.bb};--bt:${c.bt};height:calc(100vh + ${c.items.length*24}vh)"><div class="band__pin">
+    <div class="wrap band__head"><div><div class="k"><span>${c.k.split(" · ")[0]}</span><i></i><span>${c.k.split(" · ")[1]}</span></div><h2>${c.t}</h2></div>
+      <div><p>${c.d}</p><div class="tags">${c.tags.map(t=>`<span>${t}</span>`).join("")}</div>
+      <div class="folders">${c.folders.map(([l,u])=>`<a class="folder" href="${u}" target="_blank" rel="noopener">${l} in Google Drive ↗</a>`).join("")}</div></div></div>
+    <div class="line"><div class="prints">${c.items.map((it,i)=>{
+      const link=it.kind==="card"||it.kind==="pdf"?it.href:null;
+      const tag=link?`a href="${link}" target="_blank" rel="noopener"`:`div role="button" tabindex="0"`;
+      return`<${tag} class="print" style="--d:${(i*1.3+ci)%6};--ar:${it.ar}" data-c="${ci}" data-i="${i}"><span class="peg"></span>${paper(c,it)}<div class="cap"><b>${it.t}</b><span>${it.type}</span></div></${link?"a":"div"}>`}).join("")}</div></div>
   </div></section>`).join("");
-  host.addEventListener("click",e=>{const p=e.target.closest(".print");if(!p)return;const im=p.querySelector(".paper > img");lightbox(im?`<img src="${im.src}" alt="">`:`<div class="paper" style="aspect-ratio:4/5;max-width:520px;margin:auto">${p.querySelector(".paper").innerHTML}</div>`)});
+  const open=p=>{const it=CATS[p.dataset.c].items[p.dataset.i];
+    if(it.kind==="gallery")lightbox(`<div class="strip">${it.src.map(s=>`<img src="${W+s}" alt="">`).join("")}</div><p class="strip-hint">swipe through the slides →</p>`);
+    else if(it.kind==="video")lightbox(`<video src="${W+it.src}" controls autoplay loop playsinline></video>`);
+    else if(it.kind==="img")lightbox(`<img src="${W+it.src}" alt="${it.t}">`)};
+  host.addEventListener("click",e=>{const p=e.target.closest("div.print");if(p)open(p)});
+  host.addEventListener("keydown",e=>{const p=e.target.closest("div.print");if(p&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(p)}});
   const bands=[...host.children].map(s=>({s,p:s.querySelector(".prints")}));
   (function loop(){
     bands.forEach(({s,p})=>{const r=s.getBoundingClientRect(),total=s.offsetHeight-innerHeight,pr=Math.min(1,Math.max(0,-r.top/total));
@@ -84,7 +183,5 @@ const ICONS=["camera","paint-brush","pencil","megaphone","frame","star","heart",
   })();
 })();
 </script>
-<script src="edits-work-samples.js"></script>
-<script src="editor.js"></script>
 </body>
 </html>

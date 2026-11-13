@@ -111,3 +111,18 @@ details.refs ul{margin:12px 0 0 18px;display:grid;gap:4px;color:var(--muted)}
   .kv dt{border-bottom:0;padding-bottom:0}
   .cover{aspect-ratio:4/3}
 }
+
+/* screenshot collages: justified rows, short and tidy; click any image to open it */
+.shots,article div[data-add]{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.shots::after,article div[data-add]::after{content:"";flex-grow:999}
+.shots>.shot,article div[data-add]>.shot{margin:0;height:170px;flex:1 1 auto;position:relative;max-width:100%}
+.shots>.shot .shot__img,article div[data-add]>.shot .shot__img{height:100%;border-radius:14px}
+.shots>.shot img,article div[data-add]>.shot img{height:100%;width:auto;min-width:100%;object-fit:cover;object-position:top}
+.shots>.shot figcaption,article div[data-add]>.shot figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 10px 7px;font-size:11.5px;line-height:1.25;color:#fff;background:linear-gradient(transparent,rgba(16,20,43,.82));border-radius:0 0 14px 14px;pointer-events:none}
+article>section>figure.shot:not(.cs-cover) .shot__img,article figure.shot[style] .shot__img{display:flex;justify-content:center;background:var(--surface)}
+article>section>figure.shot:not(.cs-cover) .shot__img img,article figure.shot[style] .shot__img img{width:auto;max-width:100%;max-height:340px;object-fit:contain}
+@media (max-width:600px){.shots>.shot,article div[data-add]>.shot{height:120px}}
+.brand{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.brand img{width:24px;height:24px;border-radius:6px;flex:none}
+.logos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.logos .brand{padding:6px 12px 6px 6px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px;font-weight:500}
