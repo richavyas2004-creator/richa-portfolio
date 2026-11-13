@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work samples · Richa Vyas</title>
+<meta name="description" content="Ad creatives, social posts, brochures, emailers and decks from five years of making things.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.ws-hero{padding:140px 0 70px}
+.ws-hero h1{font-size:clamp(60px,10vw,140px)}
+.ws-hero p{max-width:620px;color:var(--muted);margin-top:14px;font-size:18px}
+.ws-hero .walk{display:flex;align-items:center;gap:12px;margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ws-hero .walk i{width:40px;height:1.5px;background:var(--muted)}
+.band{position:relative;height:280vh;background:var(--bb);color:var(--bt)}
+.band__pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:60px}
+.band__head{display:grid;grid-template-columns:1fr 380px;gap:30px;align-items:end;margin-bottom:26px}
+.band__head .k{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;display:flex;gap:12px;align-items:center}
+.band__head .k i{width:40px;height:1.5px;background:currentColor}
+.band__head h2{font-size:clamp(46px,6.4vw,92px);margin-top:10px;color:var(--bt)}
+.band__head h2 em{color:inherit;opacity:.55}
+.band__head p{font-size:15px;opacity:.85}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span{font-size:12px;padding:4px 10px;border-radius:999px;border:1.5px solid currentColor;opacity:.8}
+.line{position:relative;height:440px}
+.line::before{content:"";position:absolute;left:-5%;right:-5%;top:18px;height:2px;background:currentColor;opacity:.55;transform:rotate(-.4deg)}
+.prints{position:absolute;left:0;top:0;display:flex;gap:44px;padding:0 6vw;will-change:transform}
+.print{position:relative;flex:none;width:260px;padding-top:10px;cursor:zoom-in;transform-origin:50% 0;animation:sway 6s ease-in-out infinite;animation-delay:calc(var(--d) * -1s)}
+.print:hover{animation-play-state:paused}
+@keyframes sway{0%,100%{rotate:-1.6deg}50%{rotate:1.6deg}}
+.peg{position:absolute;left:50%;top:0;width:14px;height:34px;margin-left:-7px;border-radius:3px;background:linear-gradient(90deg,#C9A273,#E3C499 50%,#B98D5B);box-shadow:0 2px 0 rgba(0,0,0,.25);z-index:2}
+.paper{margin-top:18px;aspect-ratio:4/5;background:#FFFDF6;color:#1E2240;box-shadow:0 18px 30px rgba(0,0,0,.22);padding:12px;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.print:hover .paper{transform:scale(1.06) translateY(4px)}
+.paper .ph{height:100%;border-radius:4px;border-color:rgba(31,42,107,.2);color:#5E6280}
+.paper .ph .ic{color:#1F2A6B}
+.paper img{width:100%;height:100%;object-fit:cover}
+.paper.has-img{padding:0}
+.cap{margin-top:12px;font-size:13px;opacity:.85}
+.lightbox .paper{margin:0;width:100%;max-height:82vh}
+@media (max-width:900px){
+  .band__head{grid-template-columns:1fr}
+  .print{width:200px}
+  .line{height:360px}
+}
+</style>
+</head>
+<body data-page="ws">
+<script src="assets/doodles.js"></script>
+<main>
+<header class="ws-hero wrap">
+  <span class="eyebrow">Work samples</span>
+  <h1>Things I've <em>made</em></h1>
+  <p>Ad creatives, social posts, brochures, emailers and decks from five years of making things. Each brand hangs on its own line, in its own colours. Scroll to walk along it, and click any print to see it up close.</p>
+  <div class="walk"><i></i>Scroll to walk the line</div>
+</header>
+<div id="bands"></div>
+</main>
+<script src="assets/site.js"></script>
+<script>
+// Add images with the image editor: open work-samples.html?edit
+const BANDS=[
+  {k:"01 · Paid social · Performance creative",t:"RadImpressions",d:"Static and video ad concepts for client campaigns on Meta and Google, written around audience insight and tested hook by hook.",tags:["Ad creatives","Hooks","UGC scripts"],bb:"#2F5FD0",bt:"#FFFFFF",n:6},
+  {k:"02 · Fintech · Content & design",t:"FIKAA",d:"Financial education for women and first-time investors: posts, carousels, reels covers, blog graphics and newsletters.",tags:["Instagram","Carousels","Blogs"],bb:"#FFDCEB",bt:"#1E2240",n:6},
+  {k:"03 · Travel & education · Campaigns",t:"Adventure Tours",d:"Brochures that worked like a silent sales rep, email sequences, event cards and social for corporate and educational trips.",tags:["Brochures","Emailers","Event cards"],bb:"#DDF5E8",bt:"#1E2240",n:5},
+  {k:"04 · Freelance & side projects · Since 2021",t:"Freelance",d:"30+ client projects and 50+ brand leads: creator content for Komalified, social for The Soft Move, plus decks, posters and logos.",tags:["Branding","Social","UGC scripts","Pitches","Decks"],bb:"#FFE6D6",bt:"#1E2240",n:6},
+];
+const ICONS=["camera","paint-brush","pencil","megaphone","frame","star","heart","bulb"];
+(()=>{
+  const host=$("#bands");
+  host.innerHTML=BANDS.map((b,bi)=>`<section class="band" style="--bb:${b.bb};--bt:${b.bt}"><div class="band__pin">
+    <div class="wrap band__head"><div><div class="k"><span>${b.k.split(" · ")[0]}</span><i></i><span>${b.k.split(" · ").slice(1).join(" · ")}</span></div><h2>${b.t}</h2></div>
+      <div><p>${b.d}</p><div class="tags">${b.tags.map(t=>`<span>${t}</span>`).join("")}</div></div></div>
+    <div class="line"><div class="prints" data-add="ws-${bi}">${[...Array(b.n)].map((_,i)=>`<div class="print" style="--d:${(i*1.3+bi)%6}" data-b="${bi}" data-i="${i}"><span class="peg"></span><div class="paper" data-slot="ws-${bi}-${i}"><div class="ph">${ic(ICONS[(i+bi)%ICONS.length])}<span>${b.t} · ${String(i+1).padStart(2,"0")}</span><small>image coming</small></div></div><div class="cap">${b.tags[i%b.tags.length]}</div></div>`).join("")}</div></div>
+  </div></section>`).join("");
+  host.addEventListener("click",e=>{const p=e.target.closest(".print");if(!p)return;const im=p.querySelector(".paper > img");lightbox(im?`<img src="${im.src}" alt="">`:`<div class="paper" style="aspect-ratio:4/5;max-width:520px;margin:auto">${p.querySelector(".paper").innerHTML}</div>`)});
+  const bands=[...host.children].map(s=>({s,p:s.querySelector(".prints")}));
+  (function loop(){
+    bands.forEach(({s,p})=>{const r=s.getBoundingClientRect(),total=s.offsetHeight-innerHeight,pr=Math.min(1,Math.max(0,-r.top/total));
+      const max=Math.max(0,p.scrollWidth-innerWidth);p.style.transform=`translateX(${-pr*max}px)`});
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>
+<script src="assets/edits/work-samples.js"></script>
+<script src="assets/editor.js"></script>
+</body>
+</html>
